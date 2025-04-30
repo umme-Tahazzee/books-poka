@@ -1,6 +1,12 @@
+@import "tailwindcss";
+@plugin "daisyui";
 
-body {
-  margin: 0;
-  display: flex;
+
+
+.nav{
+  font-family: 'Work Sans';
 }
 
+body {
+ font-family: "Playfair Display";
+}
