@@ -7,8 +7,7 @@ import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 import Home from './Components/Home/Home';
 import DashBoard from './Components/DashBoad/DashBoard.jsx';
 import "@fontsource/playfair-display"; 
-
-
+import BookDetails from './Components/BookDetails/BookDetails.jsx';
 
 let router = createBrowserRouter([
   {
@@ -19,6 +18,10 @@ let router = createBrowserRouter([
        {
         path : '/',
         element: <Home/> 
+       },
+       {
+         path: 'book/:bookId',
+         element: <BookDetails/>
        },
        {
         path : '/dashboard',
