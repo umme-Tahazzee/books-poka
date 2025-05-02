@@ -17,7 +17,7 @@ const Book = ({ book }) => {
           <div className="flex justify-center gap-2 ">
             {tags.map((tag, idx) => {
               return (
-                <button className="btn btn-xs text-[#23BE0A] rounded-lg border-none ">
+                <button key={idx} className="btn btn-xs text-[#23BE0A] rounded-lg border-none ">
                   {tag}
                 </button>
               );
