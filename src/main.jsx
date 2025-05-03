@@ -8,6 +8,7 @@ import Home from './Components/Home/Home';
 import DashBoard from './Components/DashBoad/DashBoard.jsx';
 import "@fontsource/playfair-display"; 
 import BookDetails from './Components/BookDetails/BookDetails.jsx';
+import ListedBook from './Components/ListedBooks/ListedBook.jsx';
 
 let router = createBrowserRouter([
   {
@@ -18,6 +19,13 @@ let router = createBrowserRouter([
        {
         path : '/',
         element: <Home/> 
+       },
+       {
+        path : '/listedbook',
+        element: <ListedBook/> ,
+        // worst way to load some data
+        loader: () => fetch('/booksData.json') // do not load all data for some
+
        },
        {
          path: 'book/:bookId',
