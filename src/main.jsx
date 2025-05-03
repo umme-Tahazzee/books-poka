@@ -9,6 +9,8 @@ import DashBoard from './Components/DashBoad/DashBoard.jsx';
 import "@fontsource/playfair-display"; 
 import BookDetails from './Components/BookDetails/BookDetails.jsx';
 import ListedBook from './Components/ListedBooks/ListedBook.jsx';
+import { ToastContainer } from 'react-toastify';
+
 
 let router = createBrowserRouter([
   {
@@ -45,5 +47,6 @@ let router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
      <RouterProvider router={router} />
+     <ToastContainer className="text-center items-center" />
   </StrictMode>,
 )

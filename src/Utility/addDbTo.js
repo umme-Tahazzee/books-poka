@@ -1,5 +1,7 @@
 // For Read btn
 
+import { toast } from "react-toastify";
+
 const getStoreReadList = () => {
   //read list
   const storedListStr = localStorage.getItem("read-list");
@@ -14,12 +16,13 @@ const getStoreReadList = () => {
 const addToStoreReadList = (id) => {
   const storedList = getStoreReadList();
   if (storedList.includes(id)) {
-    // already exists do not add it
-    console.log(id, "already exits");
+   
   } else {
     storedList.push(id);
     const storeListStr = JSON.stringify(storedList);
     localStorage.setItem('read-list', storeListStr)
+    // ideally trigger toast from the component
+    toast('This book is added to your read list')
   }
 };
 
